@@ -46,7 +46,7 @@ if answer == 'y':
   # using this filepath is optional and for linux.
   driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
   '''
-  driver = webdriver.Chrome(options=option)
+  driver = webdriver.Chrome(Options=option)
   with open("emailList.txt") as emailList:
 
     for line in emailList:
