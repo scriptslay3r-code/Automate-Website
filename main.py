@@ -46,7 +46,8 @@ if answer == 'y':
   # using this filepath is optional and for linux.
   driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
   '''
-  driver = webdriver.Chrome(Options=options)
+  driver = webdriver.Chrome(options=options)
+  #idk why this is killing me so much lol  one damn word  feels like 2284018 mistakes
   with open("emailList.txt") as emailList:
 
     for line in emailList:
