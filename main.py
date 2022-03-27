@@ -16,11 +16,6 @@ opening = text2art("Opening")
 
 browser = text2art("Browser!")
 
-options = Options()
-
-options.add_argument('--headless')
-
-options.add_argument('--disable-gpu')
 
 url =("https://limewire.com/invite/668f67358badde5e6de7")
 
@@ -29,6 +24,11 @@ url =("https://limewire.com/invite/668f67358badde5e6de7")
 answer = input("Headless? [Y] for Yes: ")
 
 if answer == 'y':
+  options = Options()
+  
+  options.add_argument('--headless')
+  
+  options.add_argument('--disable-gpu')
 
   print(welcome)
 
