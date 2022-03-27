@@ -60,7 +60,7 @@ if answer == 'y':
         email_box.send_keys(line)
 
         email_box.submit(); time.sleep(1)
-        #Whats the difference between ^ and time.sleep(1) in a new line
+        ### The use of Semicolon in python is as the line terminator where it is used as a separator to separate multiple lines. ###
         driver.quit()
 
 # i 
