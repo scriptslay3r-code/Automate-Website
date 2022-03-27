@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 options = Options()
@@ -13,7 +14,9 @@ def generateEmails():
 
   url = ("https://www.randomlists.com/email-addresses?qty=" + qty)
 
-  print(url)
+  driver.get(url); time.sleep(1)
+  email_list = driver.find_element_by(By.CLASS_NAME, 'Rand-stage')
+  print(email_list)
 
   
 
