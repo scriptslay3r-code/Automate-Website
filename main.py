@@ -46,12 +46,12 @@ if answer == 'y':
   # using this filepath is optional and for linux.
   driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
   '''
-  driver = webdriver.Chrome(Options=option)
+  driver = webdriver.Chrome(Options=options)
   with open("emailList.txt") as emailList:
 
     for line in emailList:
 
-        #print(item)
+        
 
         driver.get(url); time.sleep(1) #Delay a second  let page load make seem more human maybe
 
