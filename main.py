@@ -42,8 +42,28 @@ if answer == 'y':
 
   time.sleep(.5)
 
+  ''' 
+  # using this filepath is optional and for linux.
   driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
+  '''
+  driver = webdriver.Chrome(options=option)
+  with open("emailList.txt") as emailList:
 
+    for line in emailList:
+
+        #print(item)
+
+        driver.get(url); time.sleep(1) #Delay a second  let page load make seem more human maybe
+
+        email_box = driver.find_element_by_name('waitlist[email]')
+
+        email_box.send_keys(line)
+
+        email_box.submit(); time.sleep(1)
+        #Whats the difference between ^ and time.sleep(1) in a new line
+        driver.quit()
+
+# i 
 else:
 
   driver = webdriver.Chrome('/usr/local/bin/chromedriver')
@@ -59,8 +79,7 @@ else:
   print(browser)
 
   time.sleep(.5)
-
-with open("emailList.txt") as emailList:
+  with open("emailList.txt") as emailList:
 
     for line in emailList:
 
@@ -79,4 +98,6 @@ with open("emailList.txt") as emailList:
         time.sleep(3) # Let the user actually see something!
 
         driver.quit()
+
+
 
